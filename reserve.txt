@@ -1,0 +1,43 @@
+void cambiarClientes()
+{
+    int input;
+    imprimirClientes();
+    cout << "Seleccione el cliente: " << endl;
+    cin >> input;
+    try
+    {
+        Cliente cliente = clientes.at(input);
+        cout << "[1] Cambie el telefono: " << endl;
+        cout << "[2] Cambie el nombre: " << endl;
+        cout << "[3] Cambie el correo: " << endl;
+        cout << "Seleccione la opción: " << endl;
+        cin >> input;
+        string telefono;
+        string nombre;
+        string correoElectronico;
+
+        switch (input)
+        {
+        case 1:
+            cout << "Ingrese el telefono: " << endl;
+            cliente.cambiarTelefono(telefono);
+            break;
+        case 2:
+            cout << "Ingrese el nombre: " << endl;
+            cliente.cambiarNombreDeEmpresa(nombre);
+            break;
+        case 3:
+            cout << "Ingrese el correo: " << endl;
+            cliente.cambiarCorreoElectronico(correoElectronico);
+            break;
+        default:
+            cout << "Ingrese un número válido" << endl;
+            break;
+        }
+    }
+    catch (const std::exception &e)
+    {
+        cout << "Seleccione un cliente válido" << endl;
+        cambiarClientes();
+    }
+}
