@@ -15,7 +15,7 @@ private:
     Bodega bodega;
     int diaEntrega;
     int mesEntrega;
-    int añoEntrega;
+    int anoEntrega;
 
 public:
     Pedido() {}
@@ -27,7 +27,7 @@ public:
         bodega = b;
         diaEntrega = d;
         mesEntrega = m;
-        añoEntrega = a;
+        anoEntrega = a;
     }
 
     // Metodos de clase //
@@ -36,14 +36,14 @@ public:
     void cambiarBodega(Bodega b);
     void cambiarDiaDeEntrega(int d);
     void cambiarMesDeEntrega(int m);
-    void cambiarAñoDeEntrega(int a);
+    void cambiarAnoDeEntrega(int a);
 
     // Métodos para acceder a los atributos //
     Cliente conseguirCliente();
     Bodega conseguirBodega();
     int conseguirDiaEntrega();
     int conseguirMesEntrega();
-    int conseguirAñoEntrega();
+    int conseguirAnoEntrega();
     void imprimirInformacion();
 };
 
@@ -63,8 +63,8 @@ void Pedido::cambiarMesDeEntrega(int m){
     mesEntrega = m;
 };
 
-void Pedido::cambiarAñoDeEntrega(int a){
-    añoEntrega = a;
+void Pedido::cambiarAnoDeEntrega(int a){
+    anoEntrega = a;
 };
 
 Cliente Pedido::conseguirCliente(){
@@ -83,8 +83,8 @@ int Pedido::conseguirMesEntrega(){
     return mesEntrega;
 };
 
-int Pedido::conseguirAñoEntrega(){
-    return añoEntrega;
+int Pedido::conseguirAnoEntrega(){
+    return anoEntrega;
 };
 
 void Pedido::imprimirInformacion()
@@ -94,6 +94,6 @@ void Pedido::imprimirInformacion()
     std::cout << "Sacado de la bodega de: " << bodega.conseguirUbicacion() << endl;
     std::cout << "Día de entrega: " << diaEntrega << endl;
     std::cout << "Mes de entrega: " << mesEntrega << endl;
-    std::cout << "Año de entrega: " << añoEntrega << endl;
+    std::cout << "Year de entrega: " << anoEntrega << endl;
     std::cout << endl;
 };

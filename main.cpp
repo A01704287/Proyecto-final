@@ -99,7 +99,7 @@ void registrarPedidos()
     Bodega bodega;
     int diaEntrega;
     int mesEntrega;
-    int añoEntrega;
+    int anoEntrega;
     int input;
 
     int numeroPedidos;
@@ -125,10 +125,10 @@ void registrarPedidos()
         cin >> diaEntrega;
         cout << "Ingrese el mes de entrega: " << endl;
         cin >> mesEntrega;
-        cout << "Ingrese el año de entrega: " << endl;
-        cin >> añoEntrega;
+        cout << "Ingrese el ano de entrega: " << endl;
+        cin >> anoEntrega;
 
-        Pedido pedido(cliente, bodega, diaEntrega, mesEntrega, añoEntrega);
+        Pedido pedido(cliente, bodega, diaEntrega, mesEntrega, anoEntrega);
         pedidos.push_back(pedido);
     }
 }
